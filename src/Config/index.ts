@@ -13,7 +13,7 @@ const parseConfig = (): Config => {
 	}
 
 	const file = readFileSync("././config.yml", "utf8");
-  let configData = YAML.parse(file);
+	let configData = YAML.parse(file);
 	configData = parsePersonalInfo(configData);
 	configData.location.preferredDays = parsePreferredDays(
 		configData.location.preferredDays,
