@@ -467,7 +467,7 @@ class TexasScheduler {
 		body: object,
 		retryTime = 0,
 	): Promise<AxiosResponse> {
-		const headers = {
+		const headers: Record<string, string> = {
 			"Content-Type": "application/json;charset=UTF-8",
 			Origin: "https://www.txdpsscheduler.com",
 			Referer: "https://www.txdpsscheduler.com",
