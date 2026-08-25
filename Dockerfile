@@ -1,6 +1,5 @@
 FROM node:slim AS base
-RUN npm i -g corepack
-RUN corepack enable
+RUN npm i -g corepack && corepack enable
 WORKDIR /home/container
 
 FROM base AS ts-compiler
