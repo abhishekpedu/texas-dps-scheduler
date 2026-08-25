@@ -1,13 +1,15 @@
-FROM node:slim AS ts-compiler
+FROM node:slim AS base
 RUN npm i -g corepack
 RUN corepack enable
 WORKDIR /home/container
+
+FROM base AS ts-compiler
 
 COPY . .
 RUN pnpm install --ignore-scripts
 RUN pnpm run build
 
-FROM node:slim AS ts-remover
+FROM base AS ts-remover
 
 ENV DEBIAN_FRONTEND=noninteractive
 
