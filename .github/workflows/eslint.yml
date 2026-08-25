@@ -1,4 +1,4 @@
-name: eslint-check
+name: lint-check
 on:
   push:
     branches:
@@ -13,4 +13,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: npm install
-      - run: npm run eslint
+      - run: npm run lint

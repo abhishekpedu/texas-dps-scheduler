@@ -1,3 +1,3 @@
 import TexasScheduler from './Client';
 
-new TexasScheduler().run();
+new TexasScheduler().runCancel();
